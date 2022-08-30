@@ -1,0 +1,63 @@
+.color-generator{
+    height: 100%;
+    min-height: 100vh;
+    background-color: lightcyan;
+}
+
+.color-form{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+
+}
+
+.color-form h3{
+    margin-right: 30px;
+}
+
+.color-input{
+    text-indent: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.color-form button{
+    background-color: darkblue;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.color-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 70vh;
+    grid-auto-rows: 1fr;
+}
+
+.color-error{
+    text-indent: 5px;
+
+    border-radius: 5px;
+    border: 2px solid red;
+
+
+}
+
+.single-color{
+    padding: 15px;
+    cursor: pointer;
+}
+
+.hex-copied{
+    margin-top: 5px;
+    color: grey;
+    font-size: 0.8rem;
+}

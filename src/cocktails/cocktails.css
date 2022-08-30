@@ -1,0 +1,342 @@
+:root{
+    --primary-color:#476a2e;
+    --primary-color-light:#d4e6a5;
+    --transition: all 0.3s linear;
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+body, html, #root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      height: 100%;
+  }
+
+.cocktails-navbar{
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cocktails-nav-center{
+    display: flex;
+    min-width: 85vw;
+    max-width: 1170px;
+    justify-content: space-between;
+
+}
+
+.cocktails-navbar img{
+    width: 70%;
+}
+
+.cocktails-navbar ul{
+    display: flex;
+    list-style: none;
+    width: 130px;
+    justify-content: space-between;
+
+}
+
+.cocktails-navbar li{
+
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.cocktail-about-us{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+
+}
+
+.cocktail-about-us-center{
+    max-width: 500px;
+    width: 80%;
+}
+
+.cocktail-about-us-center h1{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+
+}
+
+.cocktail-about-us-center p{
+    line-height: 2rem;
+    color: gray;
+}
+
+.cocktails-error{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.cocktails-error h1{
+    word-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 20px;
+}
+
+.error-btn, .back-home-btn{
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 5px 15px;
+    border: none;
+    font-weight:lighter;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    transition: var(--transition);
+}
+
+.error-btn:hover, .cocktail-btn:hover,.back-home-btn:hover{
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+}
+
+.loader-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+
+}
+
+.loader,
+.loader::before,
+.loader::after{
+    background: transparent;
+    width: 1em;
+    height: 4em;
+    animation: load1 1s infinite ease-in-out;
+    
+}
+
+.loader{
+    color: var(--primary-color);
+    text-indent: -9999em;
+    font-size: 3rem;
+    animation-delay: -0.16s;
+
+    
+}
+
+.loader::before,
+.loader::after{
+    position:absolute;
+    content: "";
+}
+
+.loader::before{
+    left: 50%;
+    transform: translateX(-2em);
+
+    animation-delay: -0.32s;
+}
+
+.loader::after{
+right: 50%;
+transform: translateX(2em);
+}
+
+@keyframes load1{
+    0%,
+    80%,
+    100%{
+        box-shadow: 0 0;
+
+    }
+    40% {
+        box-shadow:0 -2em;
+    }
+}
+
+.cocktail-list img{
+    width: 100%;
+    
+}
+
+.cocktail-container{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1px 4px 4px rgba(0,0,0,0.5);
+
+}
+
+.cocktail-container img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.home-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cocktail-list{
+    margin: 0px 10%;
+}
+
+.cocktail-container h1{
+    text-indent: 1rem;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.cocktail-container p{
+    text-indent: 1rem;
+    margin-bottom: 5px;
+    color: darkgrey;
+}
+
+.glass{
+    color: black !important;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+}
+
+.cocktail-btn{
+    margin-left: 1rem;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    width:max-content;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.search-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 50px 0px;
+}
+
+.search-center{
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    background-color: var(--primary-color-light);
+    border-radius: 5px;
+}
+
+.search-section form{
+    display: flex;
+    flex-direction: column;
+
+}
+.search-section form label{
+    color: var(--primary-color);
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.search-section form input{
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    font-size: 1.5rem;
+    height: 2rem;
+    text-indent: 0.5rem;
+}
+.no-match{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-cocktail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-home-btn{
+    margin-top: 50px;
+}
+
+.single-cocktail h1{
+    font-size: 2rem;
+    margin-top: 20px;
+    letter-spacing: 0.1rem;
+}
+.cocktail-center{
+    display: flex;
+    justify-content: center;
+}
+
+.single-cocktail-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px 50px 30px ;
+    
+}
+
+.single-cocktail-container img{
+    width: 100%;
+}
+
+.single-cocktail-container span{
+    text-transform: capitalize;
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+
+}
+.single-cocktail-container p{
+    margin-top: 25px;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.cocktail-list {
+    display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+      row-gap: 2rem;
+      column-gap: 2rem;
+    }
+@media screen and (min-width: 900px) {
+    .single-cocktail-container{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+        column-gap: 3rem;
+        justify-items: start;
+    
+    }
+
+
+  }

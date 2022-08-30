@@ -1,0 +1,321 @@
+:root{
+    --transition : all 0.3s linear;
+    --clr-primary: hsl(205, 77%, 27%);
+}
+
+.stripe{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.stripe-phone{
+    position: fixed;
+    right: 15%;
+    top: 15%;
+    width: 20%;
+}
+
+
+
+.stripe-pulldown{
+    display: none;
+    position:fixed;
+    background-color: white;
+    transition: var(--transition);
+    width: auto;
+
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 3rem;
+    text-transform: capitalize;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.stripe-pulldown::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--clr-white);
+    position: fixed;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+.stripe-pulldown h4{
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    letter-spacing:0.1rem;
+}
+
+.stripe-pulldown li{
+    margin-left: 2rem;
+    margin-right: 4rem;
+    margin-top: 1rem;
+    width: 100%;
+
+}
+
+.stripe-pulldown span{
+    margin-left: 0.5rem;
+}
+
+
+.stripe-pulldown ul{
+    display: grid;
+    list-style: none;
+    column-gap: 1rem;
+}
+
+.stripe-pulldown a{
+    text-decoration: none;
+    color: gray;
+}
+
+.col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .col-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+.pulldown-show{
+    height: auto;
+    display: unset;
+}
+
+.stripe-navbar-btn{
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+
+
+
+.stripe-navbar{
+    position: fixed;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stripe-navbar ul{
+    display: flex;
+    list-style: none;
+
+    justify-content: center;
+    width: 25rem;
+    text-transform: capitalize;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.stripe-navbar button{
+    padding: 0.5rem 2rem;
+}
+
+.stripe-signin{
+    background-color: black;
+    padding: 5px 10px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.stripe-signin:hover{
+    background-color: var(--clr-primary);
+}
+
+
+
+.stripe-sidebar{
+    display: none;
+}
+
+.stripe-submenu-mask{
+    display: none;
+}
+
+.hero-background{
+    position: fixed;
+    z-index: -90;
+    width: 100%;
+}
+
+.stripe-hero h1{
+    padding-left: 2rem;
+    font-size: 3rem;
+    max-width: 24rem;
+    padding-top: 10rem;
+}
+.stripe-hero p{
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    max-width: 30rem;
+    padding-top: 2rem;
+    color: gray;
+}
+
+.stripe-hero button{
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.stripe-hero button:hover{
+    background-color: var(--clr-primary);
+}
+
+@media screen and (max-width : 800px) {
+
+    .stripe-phone{
+        display: none;
+    }
+
+    .stripe-hero p{
+        padding-left: 2rem;
+        font-size: 0.8rem;
+        max-width: 30rem;
+        padding-top: 2rem;
+        color: gray;
+    }
+
+    .hero-background{
+        width: auto;
+    }
+
+    .stripe-sidebar{
+        position: fixed;
+
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: translate(5%, 20%);
+
+
+    }
+    .stripe-sidebar button{
+        cursor: pointer;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        padding: 5px 15px;
+        transition: var(--transition);
+    }
+
+    .stripe-navbar{
+        display: none;
+    }
+    
+    .stripe-submenu-mask{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: var(--transition);
+        transform: scale(1);
+
+    }
+
+    .stripe-submenu{
+        width: 90%;
+        height: 90%;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        
+    }
+
+    .stripe-submenu button{
+        cursor: pointer;
+        font-size: 2rem;
+        border: none;
+        background-color: transparent;
+        color: var(--clr-primary);
+        position: absolute;
+        right: 50px;
+        top: 50px;
+
+
+    }
+
+    .stripe-submenu-close{
+
+
+        transition: var(--transition);
+        transform: scale(0);
+    }
+
+    .stripe-sublink-container{
+        padding-top: 4rem;
+        text-transform: capitalize;
+        padding-left: 2rem;
+    }
+    .stripe-sublink-container article{
+        margin-bottom: 2rem;
+    }
+
+    .stripe-sublink-container h4{
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .stripe-sublink{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .stripe-sublink a{
+        text-decoration: none;
+        color: var(--clr-primary);
+    }
+
+    .stripe-sublink span{
+        margin-left: 5px;
+    }
+
+    .stripe-sidebar button:hover{
+
+        background-color: var(--clr-primary);
+    }
+    .stripe-pulldown{
+        display: none;
+    }
+
+}

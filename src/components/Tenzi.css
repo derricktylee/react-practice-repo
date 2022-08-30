@@ -1,0 +1,116 @@
+
+body{
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: #0B2434;
+  font-family: 'Karla', sans-serif;
+  height: 100vh;
+  padding: 0;
+
+
+}
+
+.inner-container{
+  width: 80%;
+  max-width: 800px;
+  background-color: #f5f5f5;
+  height: 400px;
+  margin-top: 50px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.grid{
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.box{
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15) ;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+h1{
+margin-bottom: 10px;
+}
+
+.description{
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.roll{
+  margin-top: 40px;
+  width: 130px;
+  height: 50px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #5035FF;
+  border: none;
+  color: white;
+}
+
+.box-green{
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15) ;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #59E391;
+}
+
+.winning{
+  position: absolute;
+  width: 50%;
+  height: 250px;
+  background-color: #0B2434;
+  color: rgb(185, 185, 13);
+  top: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  animation-name: moving;
+  animation-duration: 3s;
+  z-index: 999;
+
+  
+}
+
+@keyframes moving {
+  0%   {background-color:#0B243400; color: rgba(185,185,13,0);  top: 500px;}
+
+  
+}
+
+.count{
+  position: relative;
+  bottom: 35px;
+  left: 30%;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

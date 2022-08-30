@@ -1,0 +1,91 @@
+
+.menu-background{
+    height: 100%;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.menu-pic{
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border: 4px solid goldenrod;
+    border-radius: 5px;
+}
+
+.menu-item-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item{
+    display: flex;
+
+}
+
+.item-info{
+    max-width: 250px;
+    padding: 20px;
+}
+
+.title-price{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    word-spacing: 5px;
+    letter-spacing: 0.05rem;
+}
+
+.title-price span{
+    font-weight: bold;
+    color:goldenrod
+}
+
+.item-desc{
+    text-align: start;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.menu-nav{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 30px 0px 50px 0px;
+
+
+}
+
+.menu-nav button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.menu-nav button:hover{
+    color: gold;
+}
+
+@media screen and (max-width:800px) {
+    .menu-item-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+}
